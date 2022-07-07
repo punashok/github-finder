@@ -16,22 +16,23 @@ function User() {
   const params = useParams()
   
   useEffect(() => {
+    const getInfo = async () => {
+      dispatch({
+          type: 'SET_LOADING',
+      })
+      
+      const userData =  await getUserAndRepos(params.login);
+      dispatch({
+          type: 'GET_USER_AND_REPOS',
+          payload:userData
+      })
+      
+    }
     getInfo()
     
   }, [dispatch,params.login])
 
-  const getInfo = async () => {
-    dispatch({
-        type: 'SET_LOADING',
-    })
-    
-    const userData =  await getUserAndRepos(params.login);
-    dispatch({
-        type: 'GET_USER_AND_REPOS',
-        payload:userData
-    })
-    
-  }
+  
   
   if (loading) {
     return <Spinner />
