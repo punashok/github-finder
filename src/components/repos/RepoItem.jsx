@@ -24,7 +24,7 @@ function RepoItem({ repo }) {
                   {description}
               </p>
               <div>
-                  <div className="mr-2 badge badge-info badge-lg">
+                  <div className="mr-2 badge badge-info badge-lg" >
                       <FaEye className='mr-2' /> {watchers_count}
                   </div>
                   <div className="mr-2 badge badge-success badge-lg">
