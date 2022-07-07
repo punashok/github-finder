@@ -3,8 +3,8 @@ import GitHubReducer from "./GitHubReducer";
 
 const GitHubContext = createContext()
 
-const GIHUB_API_URL = 'https://api.github.com';
-const GIHUB_TOKEN = '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';
+const GIHUB_API_URL = process.env.REACT_APP_GITHUB_API_URL;
+const GIHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
 export const GitHubProvider = ({ children }) => {
     
