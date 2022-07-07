@@ -106,7 +106,7 @@ function User() {
                       Webiste
                     </div>
                   <div className="stat-value text-lg">
-                    <a href={user.blog} target="_blank" rel="noreferrer">
+                    <a href={`https://${user.blog}`} target="_blank" rel="noreferrer">
                       {user.blog}
                       </a>
                     </div>
