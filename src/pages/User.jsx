@@ -16,6 +16,7 @@ function User() {
   useEffect(() => {
     getUser(params.login);
     getRepos(params.login);
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
   if (loading) {

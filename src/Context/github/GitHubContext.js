@@ -3,8 +3,8 @@ import GitHubReducer from "./GitHubReducer";
 
 const GitHubContext = createContext()
 
-const GIHUB_API_URL = process.env.REACT_APP_GITHUB_API_URL;
-const GIHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
+const GIHUB_API_URL = 'https://api.github.com';
+const GIHUB_TOKEN = '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';
 
 export const GitHubProvider = ({ children }) => {
     
@@ -50,7 +50,7 @@ export const GitHubProvider = ({ children }) => {
             }
         )
 
-        if (response.status == 404) {
+        if (response.status === 404) {
             window.location ="/notfound"
         }
         else {
@@ -80,7 +80,7 @@ export const GitHubProvider = ({ children }) => {
             }
         )
 
-        if (response.status == 404) {
+        if (response.status === 404) {
             window.location ="/notfound"
         }
         else {
